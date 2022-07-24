@@ -111,6 +111,8 @@ public class JedisController {
             System.out.println("master");
             System.out.println("master");
             System.out.println("master");
+            System.out.println("master");
+            System.out.println("master");
             map.put("msg", b ? "成功" : "失败" );
         } catch (IOException e) {
             e.printStackTrace();
