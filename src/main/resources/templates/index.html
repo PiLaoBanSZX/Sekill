@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>hello</h2>
+<button type="button">点击抢购</button>
+<div id="div1"></div>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+    $("button").click(function (){
+
+        $.ajax({
+            url:"/jedis/sekill",
+            type : 'get',
+            dataType: 'json',
+            data: {'spid':'0101','uid':'0101'},
+            success:function(result){
+                $("#div1").html(result.msg);
+            }})
+        // $.ajax({
+        //     url:"/jedis/test",
+        //     type : 'get',
+        //     dataType: 'json',
+        //     success:function(result){
+        //         // var s = JSON.stringify(result);
+        //         // var parseJSON = $.parseJSON(s);
+        //
+        //         alert(result.msg)
+        //         $("#div1").html(result);
+        //     }})
+    })
+
+</script>
+</body>
+</html>
