@@ -108,6 +108,7 @@ public class JedisController {
         try {
             boolean b = SecKill_redisByScript.doSecKill(spid, uid);
             System.out.println(b);
+            System.out.println(b + "3");
             map.put("msg", b ? "成功" : "失败" );
         } catch (IOException e) {
             e.printStackTrace();
