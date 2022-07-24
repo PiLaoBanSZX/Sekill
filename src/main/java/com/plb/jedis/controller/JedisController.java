@@ -107,6 +107,7 @@ public class JedisController {
         HashMap<String, String> map = new HashMap<>();
         try {
             boolean b = SecKill_redisByScript.doSecKill(spid, uid);
+            System.out.println("master");
             map.put("msg", b ? "成功" : "失败" );
         } catch (IOException e) {
             e.printStackTrace();
