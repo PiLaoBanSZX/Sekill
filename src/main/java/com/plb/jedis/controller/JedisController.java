@@ -110,6 +110,7 @@ public class JedisController {
             System.out.println(b);
             System.out.println(b + "3");
             System.out.println(b + "4");
+            System.out.println(b + "master");
             map.put("msg", b ? "成功" : "失败" );
         } catch (IOException e) {
             e.printStackTrace();
